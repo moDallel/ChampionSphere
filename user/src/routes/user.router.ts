@@ -9,6 +9,12 @@ async function userRouter(fastify: FastifyInstance) {
 	handler: controllers.listUsers,
   })
 
+  fastify.route({
+	method: 'POST',
+	url: '/',
+	handler: controllers.addUser
+  })
+
 
 /*
   fastify.route({

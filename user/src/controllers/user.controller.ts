@@ -1,24 +1,28 @@
 import { FastifyReply, FastifyRequest } from "fastify"
-import { User } from "interfaces"
+import { IUser } from "interfaces";
+import User from "../models/user.model"
 
-const staticUsers: User[] = [
-  {
-	id: 1,
-	firstname: 'Joyce',
-    lastname: 'Byers',
-    username: 'joyce_byers',
-    email: 'joycebyers@gmail.com',
-    credits: 0,
-    isAdmin: false
+export const listUsers = async (request: FastifyRequest, reply: FastifyReply) => {
+  try {
+    const users = await User.find({});
+    reply.code(200).send(users)
+  } catch (error) {
+    console.error(error)
   }
-]
+}
 
-export const listUsers = async (
- request: FastifyRequest, 
- reply: FastifyReply) => {
+type AddUserRequest = FastifyRequest<{
+  Body: IUser
+}>
 
-  Promise.resolve(staticUsers)
-  .then((users) => {
-	reply.send({ data: users })
-  })
+
+export const addUser = async (request: AddUserRequest, reply: FastifyReply) => {
+  try {
+    const user = request.body
+    const newUser = await User.create(user)
+    reply.code(201).send({ user: newUser })
+  } catch (error) {
+    reply.code(400).send({ error: "User already exists" })
+    console.log(error)
+  }
 }
