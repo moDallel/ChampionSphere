@@ -1,0 +1,258 @@
+---
+openapi: 3.0.2
+info:
+  title: User API
+  description: This is the API of the User service
+  contact:
+    email: 
+      - firas.yahyaoui@imt-atlantique.net
+      - mohamed.dallel@imt-atlantique.net
+  license:
+    name: GPL v3
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
+  version: 1.0.0
+tags:
+- name: admins
+  description: Secured Admin-only calls
+- name: users
+  description: Operations available to regular users
+paths:
+  /users:
+    get:
+      tags:
+      - users
+      summary: get all users
+      description: |
+        Returns a list of all users
+      operationId: getUSers
+      responses:
+        "200":
+          description: all users
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AllUsers'
+  /users/{userid}:
+    get:
+      tags:
+      - users
+      summary: get the user by its id
+      description: By passing the user id, you can get info of a User
+      operationId: getUserById
+      parameters:
+      - name: userid
+        in: path
+        description: User ID.
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: User description
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserItem'
+        "400":
+          description: bad input parameter
+
+  /users/register:
+    post:
+      tags:
+      - users
+      summary: add a user
+      description: Adds a user to the system
+      operationId: addUser
+      requestBody:
+        description: User to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserItem'
+      responses:
+        "200":
+          description: User created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserItem'
+        "409":
+          description: User already exists
+
+  /creature:
+    get:
+      tags:
+      - users
+      summary: get all creatures for this user
+      description: |
+        Returns a list of all creatures for this user
+      operationId: getCreatures
+      responses:
+        "200":
+          description: get all creatures
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AllCreatures'
+
+  /creature/buy/{creatureId}:
+    post:
+      tags:
+      - users
+      summary: buy the creature
+      description: Adds the creature to the user's collection if it's not already there and if it's affordable
+      operationId: buyCreature
+      parameters:
+      - name: creatureId
+        in: path
+        description: Creature ID.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        "200":
+          description: Creature bought
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatureInfo'
+        "409":
+          description: Not enough credits to buy creature
+
+  /badges:
+    get:
+      tags:
+      - users
+      summary: get all badges
+      description: Returns the list of all badges owned by the user
+      operationId: getBadges
+      responses:
+        "200":
+          description: List of badges owned by user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AllBadges'
+      
+components:
+  schemas:
+    AllUsers:
+      type: object
+      required:
+        - users
+      properties:
+        users:
+          type: array
+          items:
+            type: object
+            $ref: '#/components/schemas/UserItem'
+    UserItem:
+      type: object
+      required:
+        - id
+        - username
+        - firstname
+        - lastname
+        - password
+        - credits
+        - email
+        - isAdmin
+      properties:
+        id:
+          type: integer
+          example: 1
+        username:
+          type: string
+          example: chris_rivers
+        firstname:
+          type: string
+          example: Chris
+        lastname:
+          type: string
+          example: rivers
+        password:
+          type: string
+          example: password123
+        credits:
+          type: integer
+          example: 0
+        email:
+          type: string
+          example: chris.rivers@gmail.com
+        isAdmin:
+          type: boolean
+          example: false
+    AllCreatures:
+      type: object
+      required:
+        - creatures
+      properties:
+        creatures:
+          type: array
+          items:
+            type: object
+            $ref: '#/components/schemas/CreatureInfo'
+    CreatureInfo:
+      type: object
+      required:
+        - id
+        - name
+        - image
+        - price
+        - attack_power
+        - defense_power
+        - attack_delay
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: Pikatchu
+        image:
+          type: string
+          example: img_pikatchu
+        price:
+          type: integer
+          example: 940
+        attack_power:
+          type: integer
+          example: 20
+        defense_power:
+          type: integer
+          example: 200
+        attack_delay:
+          type: integer
+          example: 5
+    AllBadges:
+      type: object
+      required:
+        - badges
+      properties:
+        badges:
+          type: array
+          items:
+            type: object
+            $ref: '#/components/schemas/BadgeItem'
+    BadgeItem:
+      type: object
+      required:
+        - id
+        - title
+        - tier
+        - description
+      properties:
+        id:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: King
+        tier:
+          type: string
+          example: Gold
+        description:
+          type: string
+          example: Win 10 games in a row

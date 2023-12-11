@@ -1,0 +1,121 @@
+---
+openapi: 3.0.2
+info:
+  title: User API
+  description: This is the API of the Auth service
+  contact:
+    email: 
+      - firas.yahyaoui@imt-atlantique.net
+      - mohamed.dallel@imt-atlantique.net
+  license:
+    name: GPL v3
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
+  version: 1.0.0
+tags:
+- name: admins
+  description: Secured Admin-only calls
+- name: users
+  description: Operations available to regular users
+paths:
+  /auth/login:
+    post:
+      tags:
+      - users
+      summary: Log a user in
+      description: Returns an authentication token for the user if data is correct
+      operationId: login
+      requestBody:
+        description: Username and Password
+        content:
+          application/json:
+            schema:
+              required:
+              - username
+              - password
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: chris_rivers
+                password:
+                  type: string
+                  example: password123
+      responses:
+        "200":
+          description: user authenticated
+          content:
+            application/json:
+              schema:
+                properties:
+                  message:
+                    type: string
+                    example: "User authenticated"
+                  token:
+                    type: String
+                    example: "token_qsdfqmsdf"
+        "400":
+          description: Wrong username/password
+  /users:
+    post:
+      tags:
+      - users
+      summary: add a user
+      description: Adds a user to the system
+      operationId: addUser
+      requestBody:
+        description: User to add
+        content:
+          application/json:
+            schema:
+              required:
+              - username
+              - password
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: chris_rivers
+                password:
+                  type: string
+                  example: password123
+              
+      responses:
+        "200":
+          description: User created
+          content:
+            application/json:
+              application/json:
+            schema:
+              required:
+              - id
+              - username
+              type: object
+              properties:
+                id:
+                  type: integer
+                  example: 1
+                username:
+                  type: string
+                  example: chris_rivers
+        "409":
+          description: User already exists
+  
+  /auth/verify/{token}:
+    get:
+      tags:
+      - users
+      summary: verify token
+      description: Returns token data if valid
+      operationId: verifyToken
+      parameters:
+      - name: token
+        in: path
+        description: token.
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: token data
+        "400":
+          description: Bad token
