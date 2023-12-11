@@ -1,5 +1,6 @@
 import fastify from 'fastify'
-import userRouter from './routes/user.router'
+import router from './routes';
+import mongoose from "mongoose";
 
 const port = 5000;
 
@@ -8,10 +9,14 @@ const startServer = async () => {
 	const server = fastify()
 
 	const errorHandler = (error, address) => {
-  	server.log.error(error, address);
+  		server.log.error(error, address);
 	}
 
-	server.register(userRouter, { prefix: '/api/user' })
+	mongoose.connect('mongodb://root:rootpassword@localhost:27017/users?authSource=admin', {})
+		.then(() => console.log("Connected to the database"))
+		.catch((e) => console.error("Error connecting: ", e))
+
+	server.register(router, { prefix: '/api' })
 
 	await server.listen({ port }, errorHandler)
   } catch (e) {
