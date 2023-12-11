@@ -78,6 +78,103 @@ paths:
                 $ref: '#/components/schemas/CreatureInfo'
         "400":
           description: bad input parameter
+  /creatures/update:
+    put:
+      tags:
+      - admins
+      summary: update the creature with the given id
+      description: By passing in the appropriate options, you can update info of a Creature
+      operationId: updateCreatureById
+      requestBody:
+        description: creatureId and info to update
+        content:
+          application/json:
+            schema:
+              required:
+              - creatureId
+              type: object
+              properties:
+                creatureId:
+                  type: integer
+                  example: 1407
+                name:
+                  type: string
+                  example: Pikatchu
+                image:
+                  type: string
+                  example: img_pikatchu
+                price:
+                  type: integer
+                  example: 940
+                attack_power:
+                  type: integer
+                  example: 20
+                defense_power:
+                  type: integer
+                  example: 200
+                attack_delay:
+                  type: integer
+                  example: 5
+      responses:
+        "200":
+          description: Creature Info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatureInfo'
+        "400":
+          description: bad input parameter
+  /creatures/add:
+    post:
+      tags:
+      - admins
+      summary: add a new creature to the store
+      description: By passing in the appropriate options, you can add a new Creature to the store
+      operationId: addCreature
+      requestBody:
+        description: creature info
+        content:
+          application/json:
+            schema:
+              required:
+              - creatureId
+              - name
+              - price
+              - attack_power
+              - defense_power
+              - attack_delay
+              type: object
+              properties:
+                creatureId:
+                  type: integer
+                  example: 1407
+                name:
+                  type: string
+                  example: Pikatchu
+                image:
+                  type: string
+                  example: img_pikatchu
+                price:
+                  type: integer
+                  example: 940
+                attack_power:
+                  type: integer
+                  example: 20
+                defense_power:
+                  type: integer
+                  example: 200
+                attack_delay:
+                  type: integer
+                  example: 5
+      responses:
+        "200":
+          description: Creature Info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatureInfo'
+        "400":
+          description: bad input parameter
 
 components:
   schemas:
@@ -94,6 +191,7 @@ components:
     CreatureInfo:
       type: object
       required:
+        - id
         - name
         - image
         - price
@@ -101,6 +199,9 @@ components:
         - defense_power
         - attack_delay
       properties:
+        id:
+          type: integer
+          example: 1407
         name:
           type: string
           example: Pikatchu

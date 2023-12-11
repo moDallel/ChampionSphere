@@ -34,10 +34,10 @@ paths:
               type: object
               properties:
                 player_1_id:
-                  type: number
+                  type: integer
                   example: 5620
                 player_2_id:
-                  type: number
+                  type: integer
                   example: 4126
       responses:
         "200":
@@ -52,7 +52,7 @@ paths:
       description: |
         By passing in the appropriate options, you can get information of a match
       parameters:
-      - name: idmatch
+      - name: matchId
         in: query
         description: match ID.
         required: true
@@ -76,80 +76,80 @@ paths:
       description: |
         By passing in the appropriate options, you can join to a match
       requestBody:
-        description: idmatch and isUser
+        description: matchId and userId
         content:
           application/json:
             schema:
               required:
-              - idmatch
-              - idUser
+              - matchId
+              - userId
               type: object
               properties:
-                idmatch:
-                  type: string
-                  example: "12345"
-                idUser:
-                  type: number
-                  example: 67890
+                matchId:
+                  type: integer
+                  example: 1407
+                userId:
+                  type: integer
+                  example: 5062
       responses:
         "200":
           description: joined to the match
         "400":
           description: bad input parameter
-  /match/send-pokemon:
+  /match/send-creature:
     put:
       tags:
       - users
-      summary: send a pokemon to the arena
+      summary: send a creature to the arena
       description: |
-        By passing in the appropriate options, you can send a pokemon to the arena
+        By passing in the appropriate options, you can send a creature to the arena
       requestBody:
-        description: idmatch, isUser and idPokemon
+        description: matchId, userId and creatureId
         content:
           application/json:
             schema:
               required:
-              - idUser
-              - idmatch
-              - idPokemon
+              - userId
+              - matchId
+              - creatureId
               type: object
               properties:
-                idUser:
-                  type: number
-                  example: 67890
-                idmatch:
-                  type: string
-                  example: "12345"
-                idPokemon:
-                  type: number
+                userId:
+                  type: integer
+                  example: 5062
+                matchId:
+                  type: integer
+                  example: 140799
+                creatureId:
+                  type: integer
                   example: 123
       responses:
         "200":
-          description: sent pokemon
+          description: sent creature
         "400":
           description: bad input parameter
   /match/get-round:
     get:
       tags:
       - users
-      summary: get information of a match
+      summary: get information of a match round
       description: |
-        By passing in the appropriate options, you can get information of a match
+        By passing in the appropriate options, you can get information of a match round
       parameters:
-      - name: idmatch
+      - name: matchId
         in: query
         description: match ID.
         required: true
         explode: false
         schema:
           type: string
-      - name: numberRound
+      - name: round_number
         in: query
-        description: number round.
+        description: integer round.
         required: true
         explode: false
         schema:
-          type: number
+          type: integer
       responses:
         "200":
           description: Information of a match
@@ -162,7 +162,7 @@ paths:
   /match/list:
     get:
       tags:
-      - users
+      - admins
       summary: get list of matches
       description: |
         You can get list of matches
@@ -183,7 +183,7 @@ paths:
       description: |
         By passing in the appropriate options, you can delete a match
       parameters:
-      - name: idmatch
+      - name: matchId
         in: query
         description: match ID.
         required: true
@@ -215,22 +215,22 @@ components:
       type: object
       properties:
         id:
-          type: string
-          example: "1102"
+          type: integer
+          example: 1102
         player_1_id:
-          type: number
+          type: integer
           example: 5620
         player_2_id:
-          type: number
+          type: integer
           example: 4126
         winner_id:
-          type: number
+          type: integer
           example: 5620
         state:
           type: string
           example: "in progress"
         currentRound:
-          type: number
+          type: integer
           example: 2
         start_date:
           type: string
@@ -246,13 +246,24 @@ components:
     Round:
       type: object
       properties:
-        idPokemonOfFirstUser:
-          type: number
-          example: 123
-        idPokemonOfSecondUser:
-          type: number
-          example: 124
-        roundWinner:
-          type: number
-          example: 111111
+        id:
+          type: integer
+          example: 6059
+        match_id:
+          type: integer
+          example: 1102
+        round_number:         
+          type: integer
+          description: "1 to 5"
+          example: 3
+        creature_p1_id:
+          type: integer
+          example: 1612
+        creature_p2_id:
+          type: integer
+          example: 2105
+        winner:         
+          type: integer
+          description: "1 if player 1 won, 2 otherwise"
+          example: 1
     
