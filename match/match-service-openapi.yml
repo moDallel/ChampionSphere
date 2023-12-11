@@ -1,0 +1,258 @@
+---
+openapi: 3.0.2
+info:
+  title: Creature API
+  description: This is the API of the Match service
+  contact:
+    email:
+      - mohamed.dallel@imt-atlantique.net
+      - firas.yahyaoui@imt-atlantique.net
+  license:
+    name: GPL v3
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
+  version: 1.0.0
+tags:
+- name: admins
+  description: Secured Admin-only calls
+- name: users
+  description: Operations available to regular users
+paths:
+  /match/create:
+    post:
+      tags:
+      - users
+      summary: create a match
+      description: |
+        By passing in the appropriate options, you can create a match
+      requestBody:
+        description: IDs of users
+        content:
+          application/json:
+            schema:
+              required:
+              - player_1_id
+              type: object
+              properties:
+                player_1_id:
+                  type: number
+                  example: 5620
+                player_2_id:
+                  type: number
+                  example: 4126
+      responses:
+        "200":
+          description: match created
+        "400":
+          description: bad input parameter
+  /match/get:
+    get:
+      tags:
+      - users
+      summary: get information of a match
+      description: |
+        By passing in the appropriate options, you can get information of a match
+      parameters:
+      - name: idmatch
+        in: query
+        description: match ID.
+        required: true
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Return information of match
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/match'
+        "400":
+          description: bad input parameter
+  /match/join:
+    put:
+      tags:
+      - users
+      summary: join to a match
+      description: |
+        By passing in the appropriate options, you can join to a match
+      requestBody:
+        description: idmatch and isUser
+        content:
+          application/json:
+            schema:
+              required:
+              - idmatch
+              - idUser
+              type: object
+              properties:
+                idmatch:
+                  type: string
+                  example: "12345"
+                idUser:
+                  type: number
+                  example: 67890
+      responses:
+        "200":
+          description: joined to the match
+        "400":
+          description: bad input parameter
+  /match/send-pokemon:
+    put:
+      tags:
+      - users
+      summary: send a pokemon to the arena
+      description: |
+        By passing in the appropriate options, you can send a pokemon to the arena
+      requestBody:
+        description: idmatch, isUser and idPokemon
+        content:
+          application/json:
+            schema:
+              required:
+              - idUser
+              - idmatch
+              - idPokemon
+              type: object
+              properties:
+                idUser:
+                  type: number
+                  example: 67890
+                idmatch:
+                  type: string
+                  example: "12345"
+                idPokemon:
+                  type: number
+                  example: 123
+      responses:
+        "200":
+          description: sent pokemon
+        "400":
+          description: bad input parameter
+  /match/get-round:
+    get:
+      tags:
+      - users
+      summary: get information of a match
+      description: |
+        By passing in the appropriate options, you can get information of a match
+      parameters:
+      - name: idmatch
+        in: query
+        description: match ID.
+        required: true
+        explode: false
+        schema:
+          type: string
+      - name: numberRound
+        in: query
+        description: number round.
+        required: true
+        explode: false
+        schema:
+          type: number
+      responses:
+        "200":
+          description: Information of a match
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Round'
+        "400":
+          description: bad input parameter
+  /match/list:
+    get:
+      tags:
+      - users
+      summary: get list of matches
+      description: |
+        You can get list of matches
+      responses:
+        "200":
+          description: List of matches
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/matchs'
+        "400":
+          description: bad input parameter
+  /match/delete:
+    delete:
+      tags:
+      - users
+      summary: delete a match
+      description: |
+        By passing in the appropriate options, you can delete a match
+      parameters:
+      - name: idmatch
+        in: query
+        description: match ID.
+        required: true
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: match deleted
+        "400":
+          description: bad input parameter
+components:
+  schemas:
+    matchs:
+      type: array
+      items:
+        $ref: '#/components/schemas/match'
+
+    match:
+      required:
+      - id
+      - player_1_id
+      - player_2_id
+      - state
+      - roundWonByFirstUser
+      - roundWonBySecondUser
+      - start_date
+      - rounds
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1102"
+        player_1_id:
+          type: number
+          example: 5620
+        player_2_id:
+          type: number
+          example: 4126
+        winner_id:
+          type: number
+          example: 5620
+        state:
+          type: string
+          example: "in progress"
+        currentRound:
+          type: number
+          example: 2
+        start_date:
+          type: string
+          example: "2023-11-12T21:41:21.007Z"
+        end_date:
+          type: string
+          example: "2023-11-12T22:31:18.007Z"
+        rounds:
+          type: array
+          items:
+            $ref: '#/components/schemas/Round'
+    
+    Round:
+      type: object
+      properties:
+        idPokemonOfFirstUser:
+          type: number
+          example: 123
+        idPokemonOfSecondUser:
+          type: number
+          example: 124
+        roundWinner:
+          type: number
+          example: 111111
+    

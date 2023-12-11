@@ -1,0 +1,122 @@
+---
+openapi: 3.0.2
+info:
+  title: Creature API
+  description: This is the API of the Creature service
+  contact:
+    email:
+      - mohamed.dallel@imt-atlantique.net
+      - firas.yahyaoui@imt-atlantique.net
+  license:
+    name: GPL v3
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
+  version: 1.0.0
+tags:
+- name: admins
+  description: Secured Admin-only calls
+- name: users
+  description: Operations available to regular users
+paths:
+  /creatures:
+    get:
+      tags:
+      - users
+      summary: get the list of the creatures available in the store
+      description: |
+        Nothing to do
+      operationId: getAllCreatures
+      responses:
+        "200":
+          description: All the creatures available in the store
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AllCreatures'
+  /creatures/name/{creaturename}:
+    get:
+      tags:
+      - users
+      summary: get the creature by its name
+      description: By passing in the appropriate options, you can get info of a Creature
+      operationId: getCreatureByName
+      parameters:
+      - name: creaturename
+        in: path
+        description: Creature Name.
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Creature Info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatureInfo'
+        "400":
+          description: bad input parameter
+  /creatures/id/{creatureid}:
+    get:
+      tags:
+      - users
+      summary: get the creature by its id
+      description: By passing in the appropriate options, you can get info of a Creature
+      operationId: getCreatureById
+      parameters:
+      - name: creatureid
+        in: path
+        description: Creature Id.
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Creature Info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatureInfo'
+        "400":
+          description: bad input parameter
+
+components:
+  schemas:
+    AllCreatures:
+      type: object
+      required:
+        - creatures
+      properties:
+        creatures:
+          type: array
+          items:
+            type: object
+            $ref: '#/components/schemas/CreatureInfo'
+    CreatureInfo:
+      type: object
+      required:
+        - name
+        - image
+        - price
+        - attack_power
+        - defense_power
+        - attack_delay
+      properties:
+        name:
+          type: string
+          example: Pikatchu
+        image:
+          type: string
+          example: img_pikatchu
+        price:
+          type: integer
+          example: 940
+        attack_power:
+          type: integer
+          example: 20
+        defense_power:
+          type: integer
+          example: 200
+        attack_delay:
+          type: integer
+          example: 5
+    
