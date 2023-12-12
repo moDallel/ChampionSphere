@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-      "scripts": {
-	   "build": "tsc",
-	   "dev": "ts-node-dev ./src/index.ts",
-	   "start": "node build/index.js"
-      },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev ./src/index.ts",
+    "start": "node build/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +17,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "fastify": "^4.24.3"
+    "axios": "^1.6.2",
+    "fastify": "^4.24.3",
+    "mongoose": "^8.0.3"
   }
 }

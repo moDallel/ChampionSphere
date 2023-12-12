@@ -13,7 +13,7 @@ async function userRouter(fastify: FastifyInstance) {
 
   fastify.route({
 	method: 'POST',
-	url: '/',
+	url: '/register',
 	handler: controllers.addUser
   })
 

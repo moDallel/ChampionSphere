@@ -1,5 +1,6 @@
 import { FastifyInstance } from 'fastify'
 import * as controllers from '../controllers'
+import { validateToken } from '../middleware/auth.middleware'
 
 async function creatureRouter(fastify: FastifyInstance) {
 
@@ -7,31 +8,36 @@ async function creatureRouter(fastify: FastifyInstance) {
 	method: 'GET',
 	url: '/',
 	handler: controllers.listCreatures,
+	preHandler: validateToken
   })
 
   fastify.route({
 	method: 'GET',
 	url: '/name/:creatureName',
 	handler: controllers.getCreatureByName,
+	preHandler: validateToken
   })
 
   fastify.route({
 	method: 'GET',
-	url: '/name/:creatureId',
+	url: '/:creatureId',
 	handler: controllers.getCreatureById,
+	preHandler: validateToken
   })
 
   fastify.route({
 	method: 'POST',
 	url: '/add',
 	handler: controllers.addCreature,
+	preHandler: validateToken
   })
 
-  fastify.route({
+  /* fastify.route({
 	method: 'PUT',
 	url: '/update',
 	handler: controllers.updateCreature,
-  })
+	preHandler: validateToken
+  }) */
 }
 
 export default creatureRouter

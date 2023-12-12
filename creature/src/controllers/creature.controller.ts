@@ -7,8 +7,8 @@ export const listCreatures = async (
  request: FastifyRequest, 
  reply: FastifyReply) => {
     try {
-        const users = await Creature.find({});
-        reply.code(200).send(users)
+        const creatures = await Creature.find({});
+        reply.code(200).send({creatures})
       } catch (error) {
         console.error(error)
       }
@@ -23,10 +23,11 @@ export const getCreatureByName = async (
     reply: FastifyReply) => {
         const { creatureName } = request.params;
         try {
-            const creature = await Creature.findOne({name: +creatureName});
-            reply.code(200).send(creature)
+            const creature = await Creature.findOne({name: creatureName});
+            reply.code(200).send({ creature, message: 'Creature found' })
           } catch (error) {
             console.error(error)
+            reply.code(400).send({ message: 'Not creature found with that name.' })
           }
    }
 
@@ -39,10 +40,11 @@ export const getCreatureById = async (
     reply: FastifyReply) => {
         const { creatureId } = request.params;
         try {
-            const creature = await Creature.findOne({id: +creatureId});
-            reply.code(200).send(creature)
+            const creature = await Creature.findById(creatureId);
+            reply.code(200).send({ creature, message: 'Creature found' })
           } catch (error) {
             console.error(error)
+            reply.code(400).send({ message: 'Not creature found with that name.' })
           }
    }
 
@@ -55,9 +57,9 @@ export const getCreatureById = async (
     try {
       const creature = request.body
       const newCreature = await Creature.create(creature)
-      reply.code(201).send({ creature: newCreature })
+      reply.code(201).send({ creature: newCreature, message: "Creature created successfully." })
     } catch (error) {
-      reply.code(400).send({ error: "Invalid inputs" })
+      reply.code(400).send({ message: "Invalid inputs" })
       console.log(error)
     }
   }

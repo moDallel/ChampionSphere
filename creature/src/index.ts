@@ -1,17 +1,22 @@
 import fastify from 'fastify'
-import creatureRouter from './routes/creature.router'
+import mongoose from 'mongoose';
+import router from './routes';
 
-const port = 5000;
+const port = 5002;
 
 const startServer = async () => {
   try {
 	const server = fastify()
 
 	const errorHandler = (error, address) => {
-  	server.log.error(error, address);
+  		server.log.error(error, address);
 	}
 
-	server.register(creatureRouter, { prefix: '/api/creatures' })
+	mongoose.connect('mongodb://root:rootpassword@localhost:27017/creatures?authSource=admin', {})
+		.then(() => console.log("Connected to the database"))
+		.catch((e) => console.error("Error connecting: ", e))
+
+	server.register(router, { prefix: '/api' })
 
 	await server.listen({ port }, errorHandler)
   } catch (e) {
