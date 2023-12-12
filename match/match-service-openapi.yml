@@ -17,7 +17,7 @@ tags:
 - name: users
   description: Operations available to regular users
 paths:
-  /match/create:
+  /api/match/create:
     post:
       tags:
       - users
@@ -44,7 +44,7 @@ paths:
           description: match created
         "400":
           description: bad input parameter
-  /match/get:
+  /api/match/get:
     get:
       tags:
       - users
@@ -68,7 +68,7 @@ paths:
                 $ref: '#/components/schemas/match'
         "400":
           description: bad input parameter
-  /match/join:
+  /api/match/join:
     put:
       tags:
       - users
@@ -96,7 +96,7 @@ paths:
           description: joined to the match
         "400":
           description: bad input parameter
-  /match/send-creature:
+  /api/match/send-creature:
     put:
       tags:
       - users
@@ -128,7 +128,7 @@ paths:
           description: sent creature
         "400":
           description: bad input parameter
-  /match/get-round:
+  /api/match/get-round:
     get:
       tags:
       - users
@@ -159,7 +159,7 @@ paths:
                 $ref: '#/components/schemas/Round'
         "400":
           description: bad input parameter
-  /match/list:
+  /api/match/list:
     get:
       tags:
       - admins
@@ -175,7 +175,7 @@ paths:
                 $ref: '#/components/schemas/matchs'
         "400":
           description: bad input parameter
-  /match/delete:
+  /api/match/delete:
     delete:
       tags:
       - users
@@ -208,8 +208,6 @@ components:
       - player_1_id
       - player_2_id
       - state
-      - roundWonByFirstUser
-      - roundWonBySecondUser
       - start_date
       - rounds
       type: object
