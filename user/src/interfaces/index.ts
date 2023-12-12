@@ -6,4 +6,5 @@ export interface IUser {
     email: string;
     credits: number;
     isAdmin: boolean;
+    creatures: Array<string>
 }

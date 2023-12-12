@@ -24,14 +24,20 @@ async function userRouter(fastify: FastifyInstance) {
 	preHandler: validateToken
   })
 
+  fastify.route({
+	method: 'GET',
+	url: '/creatures',
+	handler: controllers.getCreatures,
+	preHandler: validateToken
+  })
 
-/*
   fastify.route({
 	method: 'POST',
-	url: '/',
-	handler: controllers.addUser,
+	url: '/creatures/buy/:creatureId',
+	handler: controllers.buyCreature,
+	preHandler: validateToken
   })
-*/
+
 }
 
 export default userRouter
