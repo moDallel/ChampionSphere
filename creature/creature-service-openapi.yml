@@ -17,7 +17,7 @@ tags:
 - name: users
   description: Operations available to regular users
 paths:
-  /creatures:
+  /api/creatures:
     get:
       tags:
       - users
@@ -32,7 +32,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AllCreatures'
-  /creatures/name/{creaturename}:
+  /api/creatures/name/{creaturename}:
     get:
       tags:
       - users
@@ -55,7 +55,7 @@ paths:
                 $ref: '#/components/schemas/CreatureInfo'
         "400":
           description: bad input parameter
-  /creatures/id/{creatureid}:
+  /api/creatures/id/{creatureid}:
     get:
       tags:
       - users
@@ -78,7 +78,7 @@ paths:
                 $ref: '#/components/schemas/CreatureInfo'
         "400":
           description: bad input parameter
-  /creatures/update:
+  /api/creatures/update:
     put:
       tags:
       - admins
@@ -124,7 +124,7 @@ paths:
                 $ref: '#/components/schemas/CreatureInfo'
         "400":
           description: bad input parameter
-  /creatures/add:
+  /api/creatures/add:
     post:
       tags:
       - admins
