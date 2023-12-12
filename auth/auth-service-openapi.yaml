@@ -17,7 +17,7 @@ tags:
 - name: users
   description: Operations available to regular users
 paths:
-  /auth/login:
+  /api/auth/login:
     post:
       tags:
       - users
@@ -55,7 +55,7 @@ paths:
                     example: "token_qsdfqmsdf"
         "400":
           description: Wrong username/password
-  /users:
+  /api/auth/register:
     post:
       tags:
       - users
@@ -100,20 +100,25 @@ paths:
         "409":
           description: User already exists
   
-  /auth/verify/{token}:
-    get:
+  /auth/verify:
+    post:
       tags:
       - users
       summary: verify token
       description: Returns token data if valid
       operationId: verifyToken
-      parameters:
-      - name: token
-        in: path
-        description: token.
-        required: true
-        schema:
-          type: string
+      requestBody:
+        description: Jwt Token
+        content:
+          application/json:
+            schema:
+              required:
+              - token
+              type: object
+              properties:
+                token:
+                  type: string
+                  example: jwt_token_string
       responses:
         "200":
           description: token data

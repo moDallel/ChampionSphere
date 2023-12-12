@@ -15,6 +15,12 @@ async function authRouter(fastify: FastifyInstance) {
 	handler: controllers.login,
   })
 
+  fastify.route({
+	method: 'POST',
+	url: '/validate',
+	handler: controllers.validateToken
+  })
+
 }
 
 export default authRouter
