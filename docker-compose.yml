@@ -1,7 +1,57 @@
 version: '3.7'
 services:
+  user:
+    build:
+      context: ./user/
+    environment:
+      - AUTH_SERVICE_URL=auth:5001
+      - CREATURE_SERVICE_URL=creature:5002
+      - MONGO_URL=mongodb://root:rootpassword@mongodb_container:27017
+    depends_on:
+      - mongodb_container
+      - auth
+      - creature
+    ports:
+      - "0.0.0.0:5000:5000"
+  
+  auth:
+    build: 
+      context: ./auth/
+    environment:
+      - MONGO_URL=mongodb://root:rootpassword@mongodb_container:27017
+    depends_on:
+      - mongodb_container
+    ports:
+      - "0.0.0.0:5001:5001"
+  
+  match:
+    build: 
+      context: ./match/
+    environment:
+      - AUTH_SERVICE_URL=auth:5001
+      - USER_SERVICE_URL=user:5000
+      - MONGO_URL=mongodb://root:rootpassword@mongodb_container:27017
+    depends_on:
+      - mongodb_container
+      - user
+    ports:
+      - "0.0.0.0:5003:5003"
+  
+  creature:
+    build: 
+      context: ./creature/
+    environment:
+      - AUTH_SERVICE_URL=auth:5001
+      - MONGO_URL=mongodb://root:rootpassword@mongodb_container:27017
+    depends_on:
+      - mongodb_container
+      - auth
+    ports:
+      - "0.0.0.0:5002:5002"
+
   mongodb_container:
     image: mongo:latest
+    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: rootpassword
@@ -9,6 +59,22 @@ services:
       - 27017:27017
     volumes:
       - mongodb_data_container:/data/db
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: root
+      ME_CONFIG_BASICAUTH_PASSWORD: rootpassword
+      ME_CONFIG_MONGODB_AUTH_USERNAME: root
+      ME_CONFIG_MONGODB_AUTH_PASSWORD: rootpassword
+      ME_CONFIG_MONGODB_SERVER: mongodb_container
+      ME_CONFIG_MONGODB_PORT: "27017"
+      ME_CONFIG_MONGODB_TLS: true
+    ports:
+      - "0.0.0.0:8081:8081"
+    depends_on:
+      - mongodb_container
 
 volumes:
   mongodb_data_container:
