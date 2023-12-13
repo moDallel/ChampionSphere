@@ -6,6 +6,7 @@ import dotenv from "dotenv"
 dotenv.config()
 
 const port = 5003;
+const host = '0.0.0.0'
 const MONGO_URL = process.env.MONGO_URL
 
 const startServer = async () => {
@@ -22,9 +23,10 @@ const startServer = async () => {
 
 	server.register(router, { prefix: '/api' })
 
-	await server.listen({ port }, errorHandler)
+	await server.listen({ host, port }, errorHandler)
   } catch (e) {
 	console.error(e)
+	process.exit(1)
   }
 }
 
