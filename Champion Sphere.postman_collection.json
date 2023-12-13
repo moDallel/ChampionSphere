@@ -1,0 +1,1122 @@
+{
+	"info": {
+		"_postman_id": "52c5bb57-6314-4ef0-8ec7-d4b9d0543dc8",
+		"name": "Champion Sphere",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14985748"
+	},
+	"item": [
+		{
+			"name": "Register requests",
+			"item": [
+				{
+					"name": "Mohamed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"mohamed\",\n    \"password\": \"mohamed\",\n    \"firstname\": \"Mohamed\",\n    \"lastname\": \"Dallel\",\n    \"email\": \"mohamed.dallel@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"firas\",\n    \"password\": \"firas\",\n    \"firstname\": \"Firas\",\n    \"lastname\": \"Yahyaoui\",\n    \"email\": \"firas.yahyaoui@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login requests",
+			"item": [
+				{
+					"name": "Mohamed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"mohamed\",\n    \"password\": \"mohamed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"firas\",\n    \"password\": \"firas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Creatures",
+			"item": [
+				{
+					"name": "pikachu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"pikachu\",\n    \"price\": 100,\n    \"attack_power\": 5,\n    \"defense_power\": 50,\n    \"attack_delay\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/creature/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"creature",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulbasaur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"bulbasaur\",\n    \"price\": 0,\n    \"attack_power\": 5,\n    \"defense_power\": 50,\n    \"attack_delay\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/creature/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"creature",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Charmeleon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"charmeleon\",\n    \"price\": 0,\n    \"attack_power\": 5,\n    \"defense_power\": 50,\n    \"attack_delay\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/creature/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"creature",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Squirtle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"squirtle\",\n    \"price\": 0,\n    \"attack_power\": 5,\n    \"defense_power\": 50,\n    \"attack_delay\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/creature/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"creature",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Charmander",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"charmander\",\n    \"price\": 0,\n    \"attack_power\": 5,\n    \"defense_power\": 50,\n    \"attack_delay\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/creature/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"creature",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Venusaur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"venusaur\",\n    \"price\": 0,\n    \"attack_power\": 5,\n    \"defense_power\": 50,\n    \"attack_delay\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/creature/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"creature",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all creatures",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5002/api/creature",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"creature"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buy Creatures",
+			"item": [
+				{
+					"name": "Mohamed buy bulbasaur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/bulbasaur",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"bulbasaur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas buy bulbasaur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/bulbasaur",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"bulbasaur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mohamed buy charmeleon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/charmeleon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"charmeleon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas buy charmeleon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/charmeleon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"charmeleon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mohamed buy squirtle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/squirtle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"squirtle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas buy squirtle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/squirtle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"squirtle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mohamed buy charmander",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/charmander",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"charmander"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas buy charmander",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/charmander",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"charmander"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mohamed buy venusaur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/venusaur",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"venusaur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas buy venusaur",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/venusaur",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"venusaur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mohamed get creatures",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas get creatures",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mohamed tries to buy pikachu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/pikachu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"pikachu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas tries to buy pikachu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/creatures/buy/pikachu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"creatures",
+								"buy",
+								"pikachu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match",
+			"item": [
+				{
+					"name": "Mohamed create match",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/match/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"match",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas join match",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/match/join/6578fe2bb248513a0d3f76c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"match",
+								"join",
+								"6578fe2bb248513a0d3f76c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mohamed send creature",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"creatureName\": \"squirtle\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/match/send-creature/6578fe2bb248513a0d3f76c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"match",
+								"send-creature",
+								"6578fe2bb248513a0d3f76c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firas send creature",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"creatureName\": \"venusaur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/match/send-creature/6578fe2bb248513a0d3f76c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"match",
+								"send-creature",
+								"6578fe2bb248513a0d3f76c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get match rounds",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/match/6578fe2bb248513a0d3f76c8/rounds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"match",
+								"6578fe2bb248513a0d3f76c8",
+								"rounds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get match",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/match/6578fe2bb248513a0d3f76c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"match",
+								"6578fe2bb248513a0d3f76c8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
