@@ -1,7 +1,12 @@
 import fastify from 'fastify'
-import creatureRouter from './routes/creature.router'
+import router from './routes';
+import mongoose from "mongoose";
+import dotenv from "dotenv"
 
-const port = 5000;
+dotenv.config()
+
+const port = 5003;
+const MONGO_URL = process.env.MONGO_URL
 
 const startServer = async () => {
   try {
@@ -11,7 +16,11 @@ const startServer = async () => {
   	server.log.error(error, address);
 	}
 
-	server.register(creatureRouter, { prefix: '/api/match' })
+	mongoose.connect(MONGO_URL + '/matches?authSource=admin&retryWrites=true&w=majority', {})
+		.then(() => console.log("Connected to the database"))
+		.catch((e) => console.error("Error connecting: ", e))
+
+	server.register(router, { prefix: '/api' })
 
 	await server.listen({ port }, errorHandler)
   } catch (e) {

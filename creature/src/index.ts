@@ -1,8 +1,12 @@
 import fastify from 'fastify'
 import mongoose from 'mongoose';
 import router from './routes';
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const port = 5002;
+const MONGO_URL = process.env.MONGO_URL
 
 const startServer = async () => {
   try {
@@ -12,7 +16,7 @@ const startServer = async () => {
   		server.log.error(error, address);
 	}
 
-	mongoose.connect('mongodb://root:rootpassword@localhost:27017/creatures?authSource=admin', {})
+	mongoose.connect(MONGO_URL + '/creatures?authSource=admin&retryWrites=true&w=majority', {})
 		.then(() => console.log("Connected to the database"))
 		.catch((e) => console.error("Error connecting: ", e))
 

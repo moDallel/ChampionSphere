@@ -63,7 +63,7 @@ export const getCreatureById = async (
       console.log(error)
     }
   }
-
+/* 
   export const updateCreature = async (request: AddCreatureRequest, reply: FastifyReply) => {
     try {
       const creature = request.body
@@ -74,5 +74,5 @@ export const getCreatureById = async (
       reply.code(400).send({ error: "Invalid inputs" })
       console.log(error)
     }
-  }
+  } */
 

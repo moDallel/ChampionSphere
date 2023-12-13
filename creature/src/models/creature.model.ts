@@ -11,7 +11,7 @@ const creatureSchema = new Schema({
     image: {
         type: String,
         required: false,
-        unique: true
+        // unique: true
     },
     price: {
         type: Number,
@@ -35,6 +35,6 @@ const creatureSchema = new Schema({
     }
 })
 
-const creature = mongoose.model('creature', creatureSchema)
+const Creature = mongoose.model('creature', creatureSchema)
 
-export default creature
+export default Creature

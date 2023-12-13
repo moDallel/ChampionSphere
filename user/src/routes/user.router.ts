@@ -33,8 +33,15 @@ async function userRouter(fastify: FastifyInstance) {
 
   fastify.route({
 	method: 'POST',
-	url: '/creatures/buy/:creatureId',
+	url: '/creatures/buy/:creatureName',
 	handler: controllers.buyCreature,
+	preHandler: validateToken
+  })
+
+  fastify.route({
+	method: 'POST',
+	url: '/add/credits',
+	handler: controllers.addCredit,
 	preHandler: validateToken
   })
 

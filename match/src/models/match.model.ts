@@ -3,54 +3,41 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const matchSchema = new Schema({
-    player_1_id: {
-        type: Number,
-        required: true,
-    },
-    player_2_id: {
-        type: Number,
-    },
-    state: {
+    player1Username: {
         type: String,
         required: true,
+    },
+    game: {
+        type: String,
+        default: 'random'
+    },
+    player2Username: {
+        type: String,
+        default: "empty"
+    },
+    state: {
+        type: 'String',
+        default: 'pending'
     },
     start_date: {
         type: String,
-        required: true,
+        default: new Date().toISOString()
     },
     end_date: {
-        type: String,
+        type: String
     },
-    rounds:{
-        type: Array<round>,
-        required: true,
+    winner: {
+        type: Number
+    },
+    rounds: [
+        { type: Schema.Types.ObjectId, ref: 'round' }
+    ],
+    roundsWonByPlayer1: {
+        type: Number,
+        default: 0
     }
 })
 
-const roundSchema = new Schema({
-    match_id: {
-        type: Number,
-        required: true,
-    },
-    round_number: {
-        type: Number,
-        required: true,
-    },
-    creature_p1_id: {
-        type: Number,
-        required: true,
-    },
-    creature_p2_id: {
-        type: Number,
-        required: true,
-    },
-    winner: {
-        type: Number,
-        required: true,
-    },
-})
+const Match = mongoose.model('match', matchSchema)
 
-const match = mongoose.model('match', matchSchema)
-const round = mongoose.model('round', roundSchema)
-
-export default match; round;
+export default Match;

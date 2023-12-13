@@ -61,11 +61,10 @@ export const getUser = async (request: GetUserRequest, reply: FastifyReply) => {
 export const getCreatures = async (request: FastifyRequest, reply: FastifyReply) => {
   try {
     const authHeader = request.headers.authorization
-    const token = authHeader && authHeader.split(' ')[1]
-    const username = jwt.decode(token).username
+    const username = getUsernameFromRequestHeaders(request)
     const user = await User.findOne({ username })
-    const creatures = await Promise.all(user.creatures.map(async (creatureId: string) => {
-      const creatureRequest = await axios.get(`http://${CREATURE_SERVICE_URL}/api/creature/${creatureId}`, {
+    const creatures = await Promise.all(user.creatures.map(async (creatureName: string) => {
+      const creatureRequest = await axios.get(`http://${CREATURE_SERVICE_URL}/api/creature/name/${creatureName}`, {
         headers: {
           Authorization: authHeader
         }
@@ -81,15 +80,15 @@ export const getCreatures = async (request: FastifyRequest, reply: FastifyReply)
 
 type BuyCreatureRequest = FastifyRequest<{
   Params: {
-    creatureId: string
+    creatureName: string
   }
 }>
 
 export const buyCreature = async (request: BuyCreatureRequest, reply: FastifyReply) => {
   try {
-    const { creatureId } = request.params
+    const { creatureName } = request.params
     const authHeader = request.headers.authorization
-    const creatureRequest = await axios.get(`http://${CREATURE_SERVICE_URL}/api/creature/${creatureId}`, {
+    const creatureRequest = await axios.get(`http://${CREATURE_SERVICE_URL}/api/creature/name/${creatureName}`, {
       headers: {
         Authorization: authHeader
       }
@@ -99,16 +98,15 @@ export const buyCreature = async (request: BuyCreatureRequest, reply: FastifyRep
       return
     }
     const creature = creatureRequest.data.creature
-    const token = authHeader && authHeader.split(' ')[1]
-    const username = jwt.decode(token).username
+    const username = getUsernameFromRequestHeaders(request)
     const user = await User.findOne({ username })
     const creatures = user.creatures
-    if (creatures.includes(creature._id))
+    if (creatures.includes(creature.name))
       reply.code(400).send({ message: "User already has creature" })
     else if (user.credits < creature.price)
       reply.code(400).send({ message: "Not enough credit to buy creature" })
     else {
-      creatures.push(creature._id.toString())
+      creatures.push(creature.name)
       await User.findOneAndUpdate({ username }, {
         creatures,
         credits: user.credits - creature.price
@@ -119,4 +117,28 @@ export const buyCreature = async (request: BuyCreatureRequest, reply: FastifyRep
     console.error(error)
     reply.code(400).send({ message: "Error while trying to buy creature" })
   }
+}
+
+type AddCreditRequest = FastifyRequest<{
+  Body: {
+    credit: number,
+    username: string
+  }
+}>
+export const addCredit = async (request: AddCreditRequest, reply: FastifyReply) => {
+  try {
+    const { credit, username } = request.body
+    const user = await User.findOne({ username })
+    const newUser = await User.findOneAndUpdate({ username }, { credits: user.credits + credit })
+    reply.code(200).send({ message: 'Added credits successfully', user: newUser })
+  } catch (error) {
+    console.error(error)
+    reply.send(400).send({ message: 'Error while adding credit to user' })
+  }
+}
+
+const getUsernameFromRequestHeaders = (request: FastifyRequest) => {
+  const authHeader = request.headers.authorization
+  const token = authHeader && authHeader.split(' ')[1]
+  return jwt.decode(token).username
 }
