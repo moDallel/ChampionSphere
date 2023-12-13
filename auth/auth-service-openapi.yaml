@@ -4,9 +4,7 @@ info:
   title: User API
   description: This is the API of the Auth service
   contact:
-    email: 
-      - firas.yahyaoui@imt-atlantique.net
-      - mohamed.dallel@imt-atlantique.net
+    email: firas.yahyaoui@imt-atlantique.net
   license:
     name: GPL v3
     url: https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -51,7 +49,7 @@ paths:
                     type: string
                     example: "User authenticated"
                   token:
-                    type: String
+                    type: string
                     example: "token_qsdfqmsdf"
         "400":
           description: Wrong username/password
@@ -84,23 +82,22 @@ paths:
           description: User created
           content:
             application/json:
-              application/json:
-            schema:
-              required:
-              - id
-              - username
-              type: object
-              properties:
-                id:
-                  type: integer
-                  example: 1
-                username:
-                  type: string
-                  example: chris_rivers
+              schema:
+                required:
+                - id
+                - username
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  username:
+                    type: string
+                    example: chris_rivers
         "409":
           description: User already exists
   
-  /auth/verify:
+  /api/auth/verify:
     post:
       tags:
       - users

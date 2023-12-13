@@ -1,53 +1,37 @@
 version: '3.7'
 services:
   user:
-    build:
-      context: ./user/
+    build: ./user
     environment:
       - AUTH_SERVICE_URL=auth:5001
       - CREATURE_SERVICE_URL=creature:5002
       - MONGO_URL=mongodb://root:rootpassword@mongodb_container:27017
-    depends_on:
-      - mongodb_container
-      - auth
-      - creature
     ports:
-      - "0.0.0.0:5000:5000"
+      - "5000:5000"
   
   auth:
-    build: 
-      context: ./auth/
+    build: ./auth
     environment:
       - MONGO_URL=mongodb://root:rootpassword@mongodb_container:27017
-    depends_on:
-      - mongodb_container
     ports:
-      - "0.0.0.0:5001:5001"
+      - "5001:5001"
   
   match:
-    build: 
-      context: ./match/
+    build: ./match
     environment:
       - AUTH_SERVICE_URL=auth:5001
       - USER_SERVICE_URL=user:5000
       - MONGO_URL=mongodb://root:rootpassword@mongodb_container:27017
-    depends_on:
-      - mongodb_container
-      - user
     ports:
-      - "0.0.0.0:5003:5003"
+      - "5003:5003"
   
   creature:
-    build: 
-      context: ./creature/
+    build: ./creature
     environment:
       - AUTH_SERVICE_URL=auth:5001
       - MONGO_URL=mongodb://root:rootpassword@mongodb_container:27017
-    depends_on:
-      - mongodb_container
-      - auth
     ports:
-      - "0.0.0.0:5002:5002"
+      - "5002:5002"
 
   mongodb_container:
     image: mongo:latest

@@ -4,9 +4,7 @@ info:
   title: Creature API
   description: This is the API of the Match service
   contact:
-    email:
-      - mohamed.dallel@imt-atlantique.net
-      - firas.yahyaoui@imt-atlantique.net
+    email: mohamed.dallel@imt-atlantique.net
   license:
     name: GPL v3
     url: https://www.gnu.org/licenses/gpl-3.0.en.html
