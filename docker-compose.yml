@@ -1,5 +1,16 @@
 version: '3.7'
 services:
+  proxy:
+    image: nginx
+    volumes:
+      - ./proxy:/etc/nginx:ro #readonly
+    ports:
+      - 8080:80
+    depends_on:
+      - user
+      - auth
+      - match
+      - creature
   user:
     build: ./user
     environment:
