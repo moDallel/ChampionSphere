@@ -21,7 +21,8 @@ const roundSchema = new Schema({
         required: false,
     },
     winner: {
-        type: Number
+        type: Number,
+        default: 0
     },
 })
 
