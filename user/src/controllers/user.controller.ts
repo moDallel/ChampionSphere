@@ -5,7 +5,7 @@ import axios from "axios"
 import jwt from "jsonwebtoken"
 
 const AUTH_SERVICE_URL = process.env.AUTH_SERVICE_URL || 'localhost:5001'
-const CREATURE_SERVICE_URL = process.env.AUTH_SERVICE_URL || 'localhost:5002'
+const CREATURE_SERVICE_URL = process.env.CREATURE_SERVICE_URL || 'localhost:5002'
 
 export const listUsers = async (request: FastifyRequest, reply: FastifyReply) => {
   try {
