@@ -24,12 +24,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/user/register",
+							"raw": "http://localhost:8080/api/user/register",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -54,12 +54,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/user/register",
+							"raw": "http://localhost:8080/api/user/register",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -89,12 +89,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/api/auth/login",
+							"raw": "http://localhost:8080/api/auth/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5001",
+							"port": "8080",
 							"path": [
 								"api",
 								"auth",
@@ -119,12 +119,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/api/auth/login",
+							"raw": "http://localhost:8080/api/auth/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5001",
+							"port": "8080",
 							"path": [
 								"api",
 								"auth",
@@ -147,7 +147,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -164,12 +164,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5002/api/creature/add",
+							"raw": "http://localhost:8080/api/creature/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5002",
+							"port": "8080",
 							"path": [
 								"api",
 								"creature",
@@ -187,7 +187,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -204,12 +204,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5002/api/creature/add",
+							"raw": "http://localhost:8080/api/creature/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5002",
+							"port": "8080",
 							"path": [
 								"api",
 								"creature",
@@ -227,7 +227,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -244,12 +244,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5002/api/creature/add",
+							"raw": "http://localhost:8080/api/creature/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5002",
+							"port": "8080",
 							"path": [
 								"api",
 								"creature",
@@ -267,7 +267,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -284,12 +284,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5002/api/creature/add",
+							"raw": "http://localhost:8080/api/creature/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5002",
+							"port": "8080",
 							"path": [
 								"api",
 								"creature",
@@ -307,7 +307,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -324,12 +324,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5002/api/creature/add",
+							"raw": "http://localhost:8080/api/creature/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5002",
+							"port": "8080",
 							"path": [
 								"api",
 								"creature",
@@ -347,7 +347,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -364,12 +364,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5002/api/creature/add",
+							"raw": "http://localhost:8080/api/creature/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5002",
+							"port": "8080",
 							"path": [
 								"api",
 								"creature",
@@ -387,7 +387,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -395,12 +395,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5002/api/creature",
+							"raw": "http://localhost:8080/api/creature",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5002",
+							"port": "8080",
 							"path": [
 								"api",
 								"creature"
@@ -422,7 +422,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGMzMzE4N2Y1Y2M5ZTU3YTZjODEiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2ODIyNzksImV4cCI6MTcwMjc2ODY3OX0.BuISqchJvtjHx7yaYui4uggxGcLoHPVqte2AH1hGQO0",
 									"type": "string"
 								}
 							]
@@ -430,12 +430,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/bulbasaur",
+							"raw": "http://localhost:8080/api/user/creatures/buy/bulbasaur",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -455,7 +455,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -463,12 +463,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/bulbasaur",
+							"raw": "http://localhost:8080/api/user/creatures/buy/bulbasaur",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -488,7 +488,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGMzMzE4N2Y1Y2M5ZTU3YTZjODEiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2ODIyNzksImV4cCI6MTcwMjc2ODY3OX0.BuISqchJvtjHx7yaYui4uggxGcLoHPVqte2AH1hGQO0",
 									"type": "string"
 								}
 							]
@@ -496,12 +496,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/charmeleon",
+							"raw": "http://localhost:8080/api/user/creatures/buy/charmeleon",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -521,7 +521,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -529,12 +529,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/charmeleon",
+							"raw": "http://localhost:8080/api/user/creatures/buy/charmeleon",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -554,7 +554,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGMzMzE4N2Y1Y2M5ZTU3YTZjODEiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2ODIyNzksImV4cCI6MTcwMjc2ODY3OX0.BuISqchJvtjHx7yaYui4uggxGcLoHPVqte2AH1hGQO0",
 									"type": "string"
 								}
 							]
@@ -562,12 +562,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/squirtle",
+							"raw": "http://localhost:8080/api/user/creatures/buy/squirtle",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -587,7 +587,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -595,12 +595,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/squirtle",
+							"raw": "http://localhost:8080/api/user/creatures/buy/squirtle",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -620,7 +620,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGMzMzE4N2Y1Y2M5ZTU3YTZjODEiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2ODIyNzksImV4cCI6MTcwMjc2ODY3OX0.BuISqchJvtjHx7yaYui4uggxGcLoHPVqte2AH1hGQO0",
 									"type": "string"
 								}
 							]
@@ -628,12 +628,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/charmander",
+							"raw": "http://localhost:8080/api/user/creatures/buy/charmander",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -653,7 +653,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -661,12 +661,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/charmander",
+							"raw": "http://localhost:8080/api/user/creatures/buy/charmander",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -686,7 +686,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGMzMzE4N2Y1Y2M5ZTU3YTZjODEiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2ODIyNzksImV4cCI6MTcwMjc2ODY3OX0.BuISqchJvtjHx7yaYui4uggxGcLoHPVqte2AH1hGQO0",
 									"type": "string"
 								}
 							]
@@ -694,12 +694,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/venusaur",
+							"raw": "http://localhost:8080/api/user/creatures/buy/venusaur",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -719,7 +719,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -727,12 +727,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/venusaur",
+							"raw": "http://localhost:8080/api/user/creatures/buy/venusaur",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -752,7 +752,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGMzMzE4N2Y1Y2M5ZTU3YTZjODEiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2ODIyNzksImV4cCI6MTcwMjc2ODY3OX0.BuISqchJvtjHx7yaYui4uggxGcLoHPVqte2AH1hGQO0",
 									"type": "string"
 								}
 							]
@@ -760,12 +760,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures",
+							"raw": "http://localhost:8080/api/user/creatures",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -783,7 +783,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -791,12 +791,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures",
+							"raw": "http://localhost:8080/api/user/creatures",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -814,7 +814,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGMzMzE4N2Y1Y2M5ZTU3YTZjODEiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2ODIyNzksImV4cCI6MTcwMjc2ODY3OX0.BuISqchJvtjHx7yaYui4uggxGcLoHPVqte2AH1hGQO0",
 									"type": "string"
 								}
 							]
@@ -822,12 +822,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/pikachu",
+							"raw": "http://localhost:8080/api/user/creatures/buy/pikachu",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -847,7 +847,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjZGM0YTE4N2Y1Y2M5ZTU3YTZjODMiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjgxNzA1LCJleHAiOjE3MDI3NjgxMDV9.7KAI4Ws4Ngx_KnXnJxVV0pb9gsmR0uEuB34u80OSzYA",
 									"type": "string"
 								}
 							]
@@ -855,12 +855,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/user/creatures/buy/pikachu",
+							"raw": "http://localhost:8080/api/user/creatures/buy/pikachu",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5000",
+							"port": "8080",
 							"path": [
 								"api",
 								"user",
@@ -885,7 +885,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcxOTRlY2NmNDM5OTU3YzkyODkiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2NTYyNjAsImV4cCI6MTcwMjc0MjY2MH0.01Y8mlmGJN5tZEDSRTALcLu2sqxKiP_SqZPzcPAmkl8",
 									"type": "string"
 								}
 							]
@@ -893,12 +893,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5003/api/match/create",
+							"raw": "http://localhost:8080/api/match/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5003",
+							"port": "8080",
 							"path": [
 								"api",
 								"match",
@@ -916,7 +916,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -924,17 +924,17 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5003/api/match/join/6578fe2bb248513a0d3f76c8",
+							"raw": "http://localhost:8080/api/match/join/657cdf311313095b4e46e3b5",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5003",
+							"port": "8080",
 							"path": [
 								"api",
 								"match",
 								"join",
-								"6578fe2bb248513a0d3f76c8"
+								"657cdf311313095b4e46e3b5"
 							]
 						}
 					},
@@ -948,7 +948,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5MzJmMDM2YTIwZWNhYzQ0MTciLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI0MTc4MjAsImV4cCI6MTcwMjUwNDIyMH0.INCSaUC0YnwOJv3_19rB27WTTLuPSM1xSn5ZTM3AMlc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcxOTRlY2NmNDM5OTU3YzkyODkiLCJ1c2VybmFtZSI6Im1vaGFtZWQiLCJpYXQiOjE3MDI2NTYyNjAsImV4cCI6MTcwMjc0MjY2MH0.01Y8mlmGJN5tZEDSRTALcLu2sqxKiP_SqZPzcPAmkl8",
 									"type": "string"
 								}
 							]
@@ -965,17 +965,17 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5003/api/match/send-creature/6578fe2bb248513a0d3f76c8",
+							"raw": "http://localhost:8080/api/match/send-creature/657cdf311313095b4e46e3b5",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5003",
+							"port": "8080",
 							"path": [
 								"api",
 								"match",
 								"send-creature",
-								"6578fe2bb248513a0d3f76c8"
+								"657cdf311313095b4e46e3b5"
 							]
 						}
 					},
@@ -989,7 +989,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -1006,17 +1006,17 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5003/api/match/send-creature/6578fe2bb248513a0d3f76c8",
+							"raw": "http://localhost:8080/api/match/send-creature/657cdf311313095b4e46e3b5",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5003",
+							"port": "8080",
 							"path": [
 								"api",
 								"match",
 								"send-creature",
-								"6578fe2bb248513a0d3f76c8"
+								"657cdf311313095b4e46e3b5"
 							]
 						}
 					},
@@ -1030,7 +1030,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -1038,16 +1038,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5003/api/match/6578fe2bb248513a0d3f76c8/rounds",
+							"raw": "http://localhost:8080/api/match/657cdf311313095b4e46e3b5/rounds",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5003",
+							"port": "8080",
 							"path": [
 								"api",
 								"match",
-								"6578fe2bb248513a0d3f76c8",
+								"657cdf311313095b4e46e3b5",
 								"rounds"
 							]
 						}
@@ -1062,7 +1062,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 									"type": "string"
 								}
 							]
@@ -1070,16 +1070,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5003/api/match/6578fe2bb248513a0d3f76c8",
+							"raw": "http://localhost:8080/api/match/657cdf311313095b4e46e3b5",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5003",
+							"port": "8080",
 							"path": [
 								"api",
 								"match",
-								"6578fe2bb248513a0d3f76c8"
+								"657cdf311313095b4e46e3b5"
 							]
 						}
 					},
@@ -1095,7 +1095,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4ZDU5NzJmMDM2YTIwZWNhYzQ0MTkiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNDE3ODMyLCJleHAiOjE3MDI1MDQyMzJ9.5zZQvusdRNkCbWU7Bogpg79KPOMkh2iP7aMwrRXaSKc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc5NzcyMTRlY2NmNDM5OTU3YzkyOGIiLCJ1c2VybmFtZSI6ImZpcmFzIiwiaWF0IjoxNzAyNjU2MzAyLCJleHAiOjE3MDI3NDI3MDJ9.7UZuYpom36sI6xqLzTlCIYaGIuXJmVc85qw0rS8cBlI",
 							"type": "string"
 						}
 					]
@@ -1103,12 +1103,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/user/",
+					"raw": "http://localhost:8080/api/user/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8080",
 					"path": [
 						"api",
 						"user",
